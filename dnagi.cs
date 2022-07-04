@@ -42,7 +42,8 @@ namespace DNAGI
         }
         public void GetNextCandidate()
         {
-            //what is normal, delta, optimization? -> with these determine next candidate
+            //apply telescope variables:
+            //what is the normal, the delta, the optimization? -> with these determine next candidate
             //this candidate can be an element, a Sent, a PSD, even a program
         }
 
