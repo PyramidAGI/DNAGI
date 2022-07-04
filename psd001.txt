@@ -1,0 +1,11 @@
+i el1 init dc 0|i init el2 el3 val|a a a
+a el1 dc dc 0|q stat alter 0|a el1 pos el3|a el1 emp el3|a el1 neg el3| q driver stat .
+q el1 stat family 0|pos: a el1 emp el3|neg: q driver stat .
+a el1 prob dc dc 0|a repair dc 0|a remove dc 0|a retrain dc 0
+q el1 own el3 0|c find el3 0|a a a
+q el1 own car001 0|c find x 0|//override a a
+a el1 goodbye dc 0|c q x 0|//dc dc dc
+a el1 quit dc 0|c q x 0|//dc dc dc
+q el1 loc dc 0|c find x 0|//dc dc dc
+q el1 isa dc 0|c find onto 0|//dc dc dc
+q el1 stat dc 0|c find log 0|//dc dc dc
