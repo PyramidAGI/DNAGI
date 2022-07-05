@@ -56,7 +56,7 @@ namespace DNAGI
             //what is the normal, the delta, the optimization, TEECL? 
             //-> with these determine next candidate
             //this candidate can be an element, a Sent, a PSD, even a program
-            //the pyramid (filled with smaller pyramids) leads to a candidate
+            //the pyramid 'Landscape' (filled with smaller pyramids) leads to a candidate
         }
         public void GetQuarks(string element)
         {
