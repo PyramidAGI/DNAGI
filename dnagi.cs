@@ -57,7 +57,7 @@ namespace DNAGI
         public void GetNextCandidate()
         {
             //apply telescope variables:
-            //what is the normal, the delta, the optimization, TEECL? 
+            //what is the normal, the ICL, the delta, the optimization, TEECL? 
             //-> with these determine next candidate
             //this candidate can be an element, a Sent, a PSD, even a program
             //the pyramid 'landscape' (filled with smaller pyramids) leads to a candidate
@@ -74,7 +74,7 @@ namespace DNAGI
         {
             string message = "Hello World for DNAGI";
             Console.WriteLine(message);
-            DNAGIHelper dnh = new DNAGIHelper();
+            var dnh = new DNAGIHelper();
             dnh.CalculateICL("");
             dnh.Test();
             dnh.FilePopulator("test001.txt");
