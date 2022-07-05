@@ -40,10 +40,15 @@ namespace DNAGI
             sw.WriteLine("empty");
             sw.Close();
         }
+        public void CopyFile(string newname, string oldname)
+        {
+            File.Copy(oldname, newname);
+        }
         public void GetNextCandidate()
         {
             //apply telescope variables:
-            //what is the normal, the delta, the optimization? -> with these determine next candidate
+            //what is the normal, the delta, the optimization, TEECL? 
+            //-> with these determine next candidate
             //this candidate can be an element, a Sent, a PSD, even a program
         }
 
@@ -58,6 +63,7 @@ namespace DNAGI
             dnh.CalculateICL("");
             dnh.Test();
             dnh.FilePopulator("test001.txt");
+            dnh.CopyFile("test001.txt", "test002.txt");
         }
     }
 }
