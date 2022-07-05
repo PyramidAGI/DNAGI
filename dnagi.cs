@@ -40,7 +40,7 @@ namespace DNAGI
             sw.WriteLine("empty");
             sw.Close();
         }
-        public void CopyFile(string newname, string oldname)
+        public void CopyFile(string oldname, string newname)
         {
             File.Copy(oldname, newname);
         }
@@ -51,7 +51,10 @@ namespace DNAGI
             //-> with these determine next candidate
             //this candidate can be an element, a Sent, a PSD, even a program
         }
-
+        public void GetQuarks(string element)
+        {
+            //get the quarks associated with the element
+        }
     }
     class Program
     {
