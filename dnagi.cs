@@ -44,6 +44,12 @@ namespace DNAGI
         {
             File.Copy(oldname, newname);
         }
+        public void Populator()
+        {
+            //uses CopyFile and Filepopulator
+            //in combination with a lkpadd table
+            //to position the PSDs in a 'landscape'
+        }
         public void GetNextCandidate()
         {
             //apply telescope variables:
