@@ -28,11 +28,15 @@ namespace DNAGI
             foreach(string fileName in fileEntries)
                 Console.WriteLine(fileName);
             Console.WriteLine(" ICL is : " + fileEntries.Length);
+            //ICL value is transformed to keywords using lkp table
+            //these keywords are then used for filtering
         }
         public void CalculateDelta(string type)
         {
             //depending on type:
             //calculate using vector between actual and normal?
+            //delta value is transformed to keywords using lkp table
+            //these keywords are then used for filtering
         }
         public void FilePopulator(string filename)
         {
