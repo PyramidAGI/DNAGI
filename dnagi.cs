@@ -46,7 +46,7 @@ namespace DNAGI
         }
         public void CopyFile(string oldname, string newname)
         {
-            File.Copy(oldname, newname);
+            File.Copy(oldname, newname,true); //overwrite existing file
         }
         public void Populator()
         {
@@ -58,7 +58,7 @@ namespace DNAGI
         {
             //apply telescope variables:
             //what is the normal, the ICL, the delta, the optimization, TEECL? 
-            //-> with these determine next candidate
+            //with these determine next candidate
             //this candidate can be an element, a Sent, a PSD, even a program
             //the pyramid 'landscape' (filled with smaller pyramids) leads to a candidate
             //this candidate can be filtered out using lkp tables and head-tail mechanisms
@@ -66,6 +66,24 @@ namespace DNAGI
         public void GetQuarks(string element)
         {
             //get the quarks associated with the element
+        }
+        public string CharacterizePSD(string PSDname)
+        {
+            //read the PSD file
+            //characterize it by reading the quarks
+            //and also by maybe by counting the number of lines?
+            string res = "";
+            try
+            {
+                var sr = new StreamReader(path + @"\" + PSDname);
+                string pipo = sr.ReadLine();
+                sr.Close();
+            }
+            catch
+            {
+                Console.WriteLine("error: this file does not exist");
+            }
+            return res;
         }
     }
     class Program
@@ -79,6 +97,7 @@ namespace DNAGI
             dnh.Test();
             dnh.FilePopulator("test001.txt");
             dnh.CopyFile("test001.txt", "test002.txt");
+            dnh.CharacterizePSD("test003.txt");
         }
     }
 }
