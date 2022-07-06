@@ -76,7 +76,12 @@ namespace DNAGI
             try
             {
                 var sr = new StreamReader(path + @"\" + PSDname);
-                string pipo = sr.ReadLine();
+                string line = sr.ReadLine();
+                string[] word = line.Split();
+                if (word.Length > 0)
+                {
+                    res = "content detected";
+                }
                 sr.Close();
             }
             catch
@@ -97,7 +102,8 @@ namespace DNAGI
             dnh.Test();
             dnh.FilePopulator("test001.txt");
             dnh.CopyFile("test001.txt", "test002.txt");
-            dnh.CharacterizePSD("test003.txt");
+            string icl = dnh.CharacterizePSD("test002.txt");
+            Console.WriteLine("ICL detected in PSD is: " + icl);
         }
     }
 }
