@@ -24,7 +24,7 @@ expand,choice decision tosplit
 waitfor,future wait
 event,publication
 increase,grow increase inverse:decrease
-dominate,towin inverse:toloose
+dominate,towin inverse:tolose
 transaction,gift payment
 reward,inverse:punish
 nature,mountain river tree

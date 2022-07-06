@@ -22,6 +22,7 @@ namespace DNAGI
         public void ReadQuarks()
         {
             Console.WriteLine(" in ReadQuarks");
+            qli.Clear();
             var sr = new StreamReader("quarks.txt");
             string line = "";
             while ((line=sr.ReadLine())!=null)
