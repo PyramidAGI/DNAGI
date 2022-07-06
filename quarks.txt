@@ -1,0 +1,39 @@
+container,cup book database.house
+shield,wall clothes toprotect defense
+channel,opening tunnel solution
+support,table tosupport resistance
+radiation,sun heating influence
+force,pull weight
+energy,energy
+time,past present future
+loc,place
+group,crowd party
+conflict,fight opposition
+own,wealth property money tobuy
+val,money
+fix,torepair
+tool,fork car
+food,sandwich soup
+pref,tolike tolove tohate toattract
+transport,tomove car rocket
+drive,tocause tosteer influence
+animate,human animal
+data,book database language
+compress,tojoin
+expand,choice decision tosplit
+waitfor,future wait
+event,publication
+increase,grow increase inverse:decrease
+dominate,towin inverse:toloose
+transaction,gift payment
+reward,inverse:punish
+nature,mountain river tree
+organization,canalsobedonewithgroup?
+sequence,causal cycle
+problem,fault stuck
+pattern,machine
+solve,toclean
+stat,big empty happy warm
+contract,deal trust confidence tobuy tohelp
+normal,balance steady average
+activity,anyverbecepttobe

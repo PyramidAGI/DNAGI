@@ -5,19 +5,37 @@ using System.IO;
 
 namespace DNAGI
 {
+    class DNRecord
+    {
+        public string key;
+        public string val;
+    }
     class DNAGIHelper
     {
         string path="";
+        List<DNRecord> qli = new List<DNRecord>(); //quarks are stored in this list
         public DNAGIHelper()
         {
             path = Directory.GetCurrentDirectory();
+            ReadQuarks();
         }
-        public void Test()
+        public void ReadQuarks()
         {
-            Console.WriteLine(" in helper test");
-            var sr = new StreamReader("psd001.txt");
-            string line = sr.ReadLine();
-            Console.WriteLine(line);
+            Console.WriteLine(" in ReadQuarks");
+            var sr = new StreamReader("quarks.txt");
+            string line = "";
+            while ((line=sr.ReadLine())!=null)
+            {
+                string[] word = line.Split(',');
+                if (word.Length>0)
+                {
+                    var q = new DNRecord();
+                    q.key = word[0];
+                    q.val = word[1];
+                    qli.Add(q); //add record from quarks file to qli
+                } 
+            }
+            //Console.WriteLine(line);
             sr.Close();
         }
         public void CalculateICL(string type)
@@ -80,7 +98,16 @@ namespace DNAGI
                 string[] word = line.Split();
                 if (word.Length > 0)
                 {
-                    res = "content detected";
+                    //check if element holds a quark:
+                    string element = word[0];
+                    foreach (DNRecord item in qli)
+                    {
+                        if (item.key==element)
+                        {
+                            res = "quark detected";
+                        }
+                    }
+                    //res = "content detected";
                 }
                 sr.Close();
             }
@@ -99,10 +126,9 @@ namespace DNAGI
             Console.WriteLine(message);
             var dnh = new DNAGIHelper();
             dnh.CalculateICL("");
-            dnh.Test();
             dnh.FilePopulator("test001.txt");
             dnh.CopyFile("test001.txt", "test002.txt");
-            string icl = dnh.CharacterizePSD("test002.txt");
+            string icl = dnh.CharacterizePSD("psd001.txt");
             Console.WriteLine("ICL detected in PSD is: " + icl);
         }
     }
