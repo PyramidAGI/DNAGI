@@ -103,7 +103,7 @@ namespace DNAGI
                     string element = word[0];
                     foreach (DNRecord item in qli)
                     {
-                        if (item.key==element)
+                        if (item.key==element) //TTD: make 'similar' subroutine
                         {
                             res = "quark detected";
                         }
