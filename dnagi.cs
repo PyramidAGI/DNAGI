@@ -107,7 +107,7 @@ namespace DNAGI
                             res = "quark detected";
                         }
                     }
-                    //res = "content detected";
+                    //TTD: can we freqcount the quarks and maybe mention the top five in a summary?
                 }
                 sr.Close();
             }
