@@ -118,6 +118,42 @@ namespace DNAGI
             }
             return res;
         }
+        public string GetQuarksInSentence(string inp)
+        {
+            string res = "";
+            string[] w = inp.Split();
+            foreach(string item in w)
+            {
+                res += GetLookupBasic(item) + " ";
+            }
+            return res;
+        }
+        private string GetLookupBasic(string inp)
+        {
+            //TTD: let this sub change apple to fruit, and then fruit is picked up by quarks.txt
+            string res = "";
+            var sr = new StreamReader("inversequarks.txt");
+            string line = "";
+            while ((line=sr.ReadLine())!=null)
+            {
+                string[] word = line.Split(',');
+                if (word.Length>0)
+                {
+                    string key = word[0];
+                    if (key==inp)
+                    {
+                        string rightval=word[1];
+                        string[] q = rightval.Split();
+                        foreach(string item in q)
+                        {
+                            res+=item + " ";
+                        }
+                    }
+                } 
+            }
+            sr.Close();
+            return res;
+        }
     }
     class Program
     {
@@ -130,6 +166,8 @@ namespace DNAGI
             dnh.FilePopulator("test001.txt");
             dnh.CopyFile("test001.txt", "test002.txt");
             string icl = dnh.CharacterizePSD("psd001.txt");
+            string quarks = dnh.GetQuarksInSentence("toshow insurance");
+            Console.WriteLine("quarks detected in lkpbasic = " + quarks);
             Console.WriteLine("ICL detected in PSD is: " + icl);
         }
     }

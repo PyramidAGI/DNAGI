@@ -1,0 +1,15 @@
+insurance,val shield control
+headphone,sound channel tool
+laptop,machine data
+room,container shield
+key,tool house
+tosell,val activity
+icecream,food
+dog,animate
+money,val
+toshow,data activity
+floor,support
+table,support
+car,transport
+building,building
+plant,flora
