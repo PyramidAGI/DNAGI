@@ -91,6 +91,7 @@ namespace DNAGI
             //read the PSD file
             //characterize it by reading the quarks
             //and also by maybe by counting the number of lines?
+            //and maybe by freqcounting the associated quarks?
             string res = "";
             try
             {
@@ -130,7 +131,8 @@ namespace DNAGI
         }
         private string GetLookupBasic(string inp)
         {
-            //TTD: let this sub change apple to fruit, and then fruit is picked up by quarks.txt
+            //TTD: let this sub change apple to fruit, and then fruit is picked up by inversequarks.txt
+            //TTD: also change amsterdam to city, and then picked up by inversequarks.txt
             string res = "";
             var sr = new StreamReader("inversequarks.txt");
             string line = "";
@@ -166,9 +168,9 @@ namespace DNAGI
             dnh.FilePopulator("test001.txt");
             dnh.CopyFile("test001.txt", "test002.txt");
             string icl = dnh.CharacterizePSD("psd001.txt");
-            string quarks = dnh.GetQuarksInSentence("toshow insurance");
-            Console.WriteLine("quarks detected in lkpbasic = " + quarks);
             Console.WriteLine("ICL detected in PSD is: " + icl);
+            string quarks = dnh.GetQuarksInSentence("human tolose key");
+            Console.WriteLine("quarks detected in lkpbasic = " + quarks);
         }
     }
 }

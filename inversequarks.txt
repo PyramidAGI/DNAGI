@@ -12,4 +12,22 @@ floor,support
 table,support
 car,transport
 building,building
-plant,flora
+plant,flora nature
+toget,activity inverse:drive
+togo,activity transport
+city,container group
+village,container group
+human,animate
+animal,animate
+tosell,val inverse:own
+tolove,pref
+tohate,inverse:pref
+wall,shield
+roof,shield
+clothes,shield
+cup,container
+plate,container
+tolose,problem inverse:dominate
+game,activity leisure
+tree,flora nature
+mountain,nature
