@@ -169,7 +169,7 @@ namespace DNAGI
             dnh.CopyFile("test001.txt", "test002.txt");
             string icl = dnh.CharacterizePSD("psd001.txt");
             Console.WriteLine("ICL detected in PSD is: " + icl);
-            string quarks = dnh.GetQuarksInSentence("human tolose key");
+            string quarks = dnh.GetQuarksInSentence("human tocook food");
             Console.WriteLine("quarks detected in lkpbasic = " + quarks);
         }
     }
