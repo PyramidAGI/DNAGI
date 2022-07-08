@@ -3,7 +3,6 @@ headphone,sound channel tool
 laptop,machine data tool
 room,container shield
 key,tool house
-tosell,val activity
 icecream,food
 dog,animate
 money,val
@@ -19,7 +18,7 @@ city,container group
 village,container group
 human,animate
 animal,animate
-tosell,val inverse:own
+tosell,val activity inverse:own
 tolove,pref
 tohate,inverse:pref
 wall,shield
@@ -31,3 +30,19 @@ tolose,problem inverse:dominate
 game,activity leisure
 tree,flora nature
 mountain,nature
+tolike,pref
+house,container shield
+horse,animate
+tofeed,activity food transport
+wind,nature nature.element drive
+toblow,drive activity
+water,nature nature.element
+toshow,drive activity
+tomake,drive drive.create activity
+toshare,drive activity transport
+tocook,drive activity food drive.create energy.food
+food,food energy.food
+tocall,inverse:drive drive.communicate activity
+book,container data
+window,channel
+
