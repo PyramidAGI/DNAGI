@@ -1,6 +1,6 @@
 insurance,val shield control
 headphone,sound channel tool
-laptop,machine data
+laptop,machine data tool
 room,container shield
 key,tool house
 tosell,val activity
@@ -9,8 +9,8 @@ dog,animate
 money,val
 toshow,data activity
 floor,support
-table,support
-car,transport
+table,support tool
+car,transport tool
 building,building
 plant,flora nature
 toget,activity inverse:drive
@@ -24,9 +24,9 @@ tolove,pref
 tohate,inverse:pref
 wall,shield
 roof,shield
-clothes,shield
-cup,container
-plate,container
+clothes,shield tool
+cup,container tool
+plate,container tool
 tolose,problem inverse:dominate
 game,activity leisure
 tree,flora nature
